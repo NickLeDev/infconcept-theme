@@ -1,5 +1,5 @@
 <script>
-    let { children, color, reverse } = $props();
+    let { children, color = "", reverse = false } = $props();
     let backgroundColor = color ? `flex-row--${color}` : "";
 </script>
 

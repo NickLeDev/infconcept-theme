@@ -1,5 +1,5 @@
 <script>
-    let { children, size } = $props();
+    let { children, size = 12 } = $props();
 
     let colSize =
         size && size > 1 && size < 12 ? `flex-col--12  flex-col--${size}` : `flex-col--12`;
