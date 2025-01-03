@@ -26,6 +26,10 @@
         &--white {
             color: #fff;
         }
+
+        &--grey {
+            color: #f4f4f4;
+        }
     }
 
     @media screen and (min-width: $lg) {

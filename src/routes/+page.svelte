@@ -1,29 +1,86 @@
 <script>
-    import FlexRow from '../components/flex-row.svelte';
-    import FlexCol from '../components/flex-col.svelte';
+    import FlexRow from "../components/flex-row.svelte";
+    import FlexCol from "../components/flex-col.svelte";
+    import TextBox from "../components/text-box.svelte";
+    import Tiles from "../components/tiles.svelte";
+    import Section from "../components/section.svelte";
+    import ImageFullWidth from "../components/image-full-width.svelte";
 </script>
 
 <FlexRow>
     <FlexCol size={5}>
         <div class="image-box"></div>
     </FlexCol>
-    <FlexCol>
-        <div class="text-box">
-            <div class="text-box__title">
-                <h2>Lorem ipsum dolor sit amet</h2>
-            </div>
-            <div class="text-box__text">
-                <p>consectetur adipiscing elit. Vivamus quis rhoncus eros, non dictum mi. Vivamus vel ex dapibus, egestas tortor eget, blandit mauris. Sed ullamcorper urna tristique dolor dignissim maximus. Integer id cursus urna, at molestie elit. Proin vel massa vitae ex scelerisque blandit. Quisque sed lectus nec nulla euismod consectetur in vel diam.</p>
-                
-                <p>In hac habitasse platea dictumst. Sed sit amet dui aliquam, pharetra velit nec, finibus erat. Donec id convallis nulla, vel aliquam elit. Aenean vestibulum rutrum bibendum. Nam in quam eu lectus venenatis placerat non eu nibh.</p>
-            </div>
-        </div>
+    <FlexCol size={7}>
+        <TextBox title="<h2>Title</h2>"></TextBox>
     </FlexCol>
 </FlexRow>
-
-<!-- <div class="flex-container">
-    <div class="flex-row flex-row--reverse">
-        
-    </div>
-</div>
--->
+<Section color="grey">
+    <FlexRow>
+        <Tiles
+            title="<h2>Les choix possibles</h2>"
+            items={[
+                {
+                    name: "Dolor sit amet consectetur",
+                    link: "https://infconcept.com",
+                    image: {
+                        src: "/images/project.png",
+                        mobileSrc: "/images/project2.png",
+                    },
+                },
+                {
+                    name: "Dolor sit amet consectetur",
+                    link: "https://infconcept.com",
+                    image: {
+                        src: "/images/project.png",
+                    },
+                },
+                {
+                    name: "Dolor sit amet consectetur",
+                    link: "https://infconcept.com",
+                    image: {
+                        src: "/images/project.png",
+                    },
+                },
+            ]}
+        />
+    </FlexRow>
+</Section>
+<ImageFullWidth
+    image="/images/full.png"
+    caption="Image full width"
+    mobileImage="/images/project.png"
+/>
+<Section color="grey">
+    <FlexRow>
+        <Tiles
+            title="<h2>Lorem ipsum dolor sit amet</h2>"
+            items={[
+                {
+                    name: "Dolor sit amet consectetur",
+                    link: "https://tkarra.com",
+                    image: {
+                        src: "/images/project.png",
+                    },
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium nisi eu mi commodo, nec placerat nulla dapibus. Fusce eu elementum sapien, sed dignissim ipsum. Nunc scelerisque.",
+                },
+                {
+                    name: "Dolor sit amet consectetur",
+                    link: "https://tkarra.com",
+                    image: {
+                        src: "/images/project.png",
+                    },
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium nisi eu mi commodo, nec placerat nulla dapibus. Fusce eu elementum sapien, sed dignissim ipsum. Nunc scelerisque.",
+                },
+                {
+                    name: "Dolor sit amet consectetur",
+                    link: "https://tkarra.com",
+                    image: {
+                        src: "/images/project.png",
+                    },
+                    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium nisi eu mi commodo, nec placerat nulla dapibus. Fusce eu elementum sapien, sed dignissim ipsum. Nunc scelerisque.",
+                },
+            ]}
+        />
+    </FlexRow>
+</Section>
