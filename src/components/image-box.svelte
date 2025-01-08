@@ -1,26 +1,31 @@
-<div class="image-box"></div>
+<script>
+    let { image = "", mobileImage = "", caption = "" } = $props();
+</script>
+
+<picture class="image-box">
+    <source srcset={mobileImage} media="(orientation: portrait)" />
+    <source srcset={image} />
+    <img srcset={image} alt={caption} />
+</picture>
 
 <style lang="scss">
-    $lg: 992px;
-
-    .image-box {
-        background-position: center center;
-        background-size: cover;
-        height: 500px;
+    .image-box :global {
+        padding-bottom: 500px;
+        position: relative;
+        overflow: hidden;
         width: 100%;
 
-        .image-box--in-first-row & {
-            display: none;
+        @container (min-width: 992px) {
+            max-width: 500px;
         }
-    }
 
-    @media screen and (min-width: $lg) {
-        .image-box {
-            height: 100%;
-
-            .image-box--in-first-row & {
-                display: block;
-            }
+        img {
+            left: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
         }
     }
 </style>

@@ -9,13 +9,11 @@
 </picture>
 
 <style lang="scss">
-    .imageFullWidth {
+    .imageFullWidth :global {
         display: block;
         width: 100%;
 
         img {
-            display: block;
-            object-fit: cover;
             width: 100%;
         }
     }

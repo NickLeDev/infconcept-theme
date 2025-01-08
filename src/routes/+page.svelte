@@ -1,6 +1,5 @@
 <script>
     import FlexRow from "../components/flex-row.svelte";
-    import FlexCol from "../components/flex-col.svelte";
     import TextBox from "../components/text-box.svelte";
     import Tiles from "../components/tiles.svelte";
     import Section from "../components/section.svelte";
@@ -9,18 +8,56 @@
     import DownloadTiles from "../components/download-tiles.svelte";
     import DownloadTile from "../components/download-tile.svelte";
     import FileButton from "../components/file-button.svelte";
+    import ImageBox from "../components/image-box.svelte";
+    import TextImage from "../components/text-image.svelte";
+    import Faq from "../components/faq.svelte";
 </script>
 
-<FlexRow>
-    <FlexCol size={5}>
-        <div class="image-box"></div>
-    </FlexCol>
-    <FlexCol size={7}>
-        <TextBox title="<h2>Title</h2>"></TextBox>
-    </FlexCol>
-</FlexRow>
+<Section>
+    <FlexRow>
+        <TextImage reverse>
+            <ImageBox image="/images/image.png" caption="Première image" />
+            <TextBox withPadding>
+                <h2 class="title">Title</h2>
+                <p>
+                    Nunc scelerisque ut metus eu feugiat. Donec blandit nulla
+                    pretium eros rutrum, et tempor ex bibendum. Lorem ipsum
+                    dolor sit amet, consectetur adipiscing elit. Aenean pretium
+                    nisi eu mi commodo, nec placerat nulla dapibus. Fusce eu
+                    elementum sapien, sed dignissim ipsum. Nunc scelerisque ut
+                    metus eu feugiat. Donec blandit nulla pretium eros rutrum,
+                    et tempor ex bibendum. Sed interdum turpis non arcu
+                    tincidunt, ac egestas urna gravida. Phasellus eget gravida
+                    augue.
+                </p>
+            </TextBox>
+        </TextImage>
+    </FlexRow>
+</Section>
 
-<Section color="grey" title="<h2>Les choix possibles</h2>">
+<Section>
+    <FlexRow>
+        <TextImage>
+            <ImageBox image="/images/image7.png" caption="Deuxième image" />
+            <TextBox withPadding>
+                <h2 class="title">Title</h2>
+                <p>
+                    Nunc scelerisque ut metus eu feugiat. Donec blandit nulla
+                    pretium eros rutrum, et tempor ex bibendum. Lorem ipsum
+                    dolor sit amet, consectetur adipiscing elit. Aenean pretium
+                    nisi eu mi commodo, nec placerat nulla dapibus. Fusce eu
+                    elementum sapien, sed dignissim ipsum. Nunc scelerisque ut
+                    metus eu feugiat. Donec blandit nulla pretium eros rutrum,
+                    et tempor ex bibendum. Sed interdum turpis non arcu
+                    tincidunt, ac egestas urna gravida. Phasellus eget gravida
+                    augue.
+                </p>
+            </TextBox>
+        </TextImage>
+    </FlexRow>
+</Section>
+
+<Section title="<h2>Les choix possibles</h2>">
     <FlexRow>
         <Tiles
             items={[
@@ -69,6 +106,110 @@
                 },
             ]}
         />
+    </FlexRow>
+</Section>
+<Section color="grey">
+    <FlexRow>
+        <TextImage faq>
+            <ImageBox image="/images/image7.png" />
+            <TextBox>
+                <h2 class="title">Lorem ipsum dolor sit</h2>
+                <p>
+                    Nunc scelerisque ut metus eu feugiat. Donec blandit nulla
+                    pretium eros rutrum, et tempor ex bibendum. Lorem ipsum
+                    dolor sit amet, consectetur adipiscing elit. Aenean pretium
+                    nisi eu mi commodo, nec placerat nulla dapibus. Fusce eu
+                    elementum sapien, sed dignissim ipsum. Nunc scelerisque ut
+                    metus eu feugiat. Donec blandit nulla pretium eros rutrum,
+                    et tempor ex bibendum. Sed interdum turpis non arcu
+                    tincidunt, ac egestas urna gravida. Phasellus eget gravida
+                    augue.
+                </p>
+                <details name="faq" class="first">
+                    <summary>Dolor sit amet consectetur</summary>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                    pretium nisi eu mi commodo, nec placerat nulla dapibus. Fusce
+                    eu elementum sapien, sed dignissim ipsum. Nunc scelerisque ut
+                    metus eu feugiat. Donec blandit nulla pretium eros rutrum, et
+                    tempor ex bibendum.
+                </details>
+                <details name="faq">
+                    <summary>Blandit nulla pretium eu</summary>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                    pretium nisi eu mi commodo, nec placerat nulla dapibus. Fusce
+                    eu elementum sapien, sed dignissim ipsum. Nunc scelerisque ut
+                    metus eu feugiat. Donec blandit nulla pretium eros rutrum, et
+                    tempor ex bibendum.
+                </details>
+                <details name="faq">
+                    <summary>Interdum turpis non arcu tincidunt</summary>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                    pretium nisi eu mi commodo, nec placerat nulla dapibus. Fusce
+                    eu elementum sapien, sed dignissim ipsum. Nunc scelerisque ut
+                    metus eu feugiat. Donec blandit nulla pretium eros rutrum, et
+                    tempor ex bibendum.
+                </details>
+                <details name="faq">
+                    <summary>Aenean pretium nisi eu mi commodo</summary>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                    pretium nisi eu mi commodo, nec placerat nulla dapibus. Fusce
+                    eu elementum sapien, sed dignissim ipsum. Nunc scelerisque ut
+                    metus eu feugiat. Donec blandit nulla pretium eros rutrum, et
+                    tempor ex bibendum.
+                </details>
+            </TextBox>
+        </TextImage>
+    </FlexRow>
+</Section>
+<Section>
+    <FlexRow>
+        <Faq>
+            <TextBox>
+                <h2 class="title">Lorem ipsum dolor sit</h2>
+                <p>
+                    Etiam consequat, leo sit amet imperdiet tincidunt, arcu erat
+                    ultricies urna, quis accumsan nulla quam vitae arcu.
+                </p>
+                <a
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    class="button">Dolor sit amet consectetur</a
+                >
+            </TextBox>
+            <TextBox>
+                <details name="faq">
+                    <summary>Dolor sit amet consectetur</summary>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                    pretium nisi eu mi commodo, nec placerat nulla dapibus. Fusce
+                    eu elementum sapien, sed dignissim ipsum. Nunc scelerisque ut
+                    metus eu feugiat. Donec blandit nulla pretium eros rutrum, et
+                    tempor ex bibendum.
+                </details>
+                <details name="faq">
+                    <summary>Blandit nulla pretium eu</summary>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                    pretium nisi eu mi commodo, nec placerat nulla dapibus. Fusce
+                    eu elementum sapien, sed dignissim ipsum. Nunc scelerisque ut
+                    metus eu feugiat. Donec blandit nulla pretium eros rutrum, et
+                    tempor ex bibendum.
+                </details>
+                <details name="faq">
+                    <summary>Interdum turpis non arcu tincidunt</summary>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                    pretium nisi eu mi commodo, nec placerat nulla dapibus. Fusce
+                    eu elementum sapien, sed dignissim ipsum. Nunc scelerisque ut
+                    metus eu feugiat. Donec blandit nulla pretium eros rutrum, et
+                    tempor ex bibendum.
+                </details>
+                <details name="faq">
+                    <summary>Aenean pretium nisi eu mi commodo</summary>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                    pretium nisi eu mi commodo, nec placerat nulla dapibus. Fusce
+                    eu elementum sapien, sed dignissim ipsum. Nunc scelerisque ut
+                    metus eu feugiat. Donec blandit nulla pretium eros rutrum, et
+                    tempor ex bibendum.
+                </details>
+            </TextBox>
+        </Faq>
     </FlexRow>
 </Section>
 <ImageFullWidth

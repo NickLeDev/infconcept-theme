@@ -8,12 +8,11 @@
 </div>
 
 <style lang="scss">
-    $lg: 992px;
-
-    .flex-row {
+    .flex-row :global {
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        gap: 30px;
 
         &--reverse {
             flex-direction: column-reverse;
@@ -30,14 +29,12 @@
         &--grey {
             color: #f4f4f4;
         }
-    }
 
-    @media screen and (min-width: $lg) {
-        .flex-row {
+        @container (min-width: 992px) {
             flex-direction: row;
 
             &--reverse {
-                flex-direction: row;
+                flex-direction: row-reverse;
             }
         }
     }
