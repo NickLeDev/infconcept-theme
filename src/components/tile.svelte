@@ -73,6 +73,7 @@
                 top: 50%;
                 transform: translate(-50%, -50%);
                 width: 100%;
+                transition: all 300ms;
             }
 
             & + * {
@@ -81,10 +82,9 @@
         }
 
         &:hover {
-            color: red;
             img {
                 height: 110%;
-                transition: 300ms 0 all;
+                transition: all 300ms;
                 width: 110%;
             }
         }
