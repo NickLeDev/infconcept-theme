@@ -13,7 +13,32 @@
     import Faq from "../components/faq.svelte";
 </script>
 
-<Section>
+<Section header>
+    <ImageFullWidth
+        image="/images/full.png"
+        caption="Image full width"
+        mobileImage="/images/project.png"
+    />
+    <FlexRow>
+        <TextBox withPadding>
+            <h1 class="title">
+                Les nouveaux luminaires  suspendus INF Concept
+            </h1>
+            <p>
+                Nous présentons une ligne de luminaires d'intérieur prêts à
+                l'emploi, méticuleusement conçus pour incarner la beauté
+                intemporelle du design d'inspiration scandinave, avec ses lignes
+                épurées, ses formes organiques et son élégance raffinée.
+            </p>
+            <p>
+                Conçus pour éclairer les espaces vastes et spacieux, ces
+                luminaires sont sûrs de répondre aux défis les plus exigeants en
+                matière d'éclairage.
+            </p>
+        </TextBox>
+    </FlexRow>
+</Section>
+<Section color="grey">
     <FlexRow>
         <TextImage reverse>
             <ImageBox image="/images/image.png" caption="Première image" />
