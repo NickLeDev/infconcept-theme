@@ -30,7 +30,7 @@
             color: #f4f4f4;
         }
 
-        @container (min-width: 992px) {
+        @container (min-width: 768px) {
             flex-direction: row;
 
             &--reverse {

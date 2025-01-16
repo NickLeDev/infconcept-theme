@@ -22,7 +22,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        container-type: inline-size;
 
         & :global > * {
             max-width: 1240px;
@@ -45,18 +44,41 @@
             padding-top: 0;
         }
 
+        &[class~="header"] + [class~="white"] {
+            padding-top: 0;
+
+            @container (min-width: 768px) {
+                padding-top: 100px;
+            }
+        }
+
+        &[class~="header"] + [class~="grey"] {
+            padding-top: 0;
+
+            @container (min-width: 768px) {
+                padding-top: 100px;
+            }
+        }
+
         &.header :global {
             position: relative;
-            padding-bottom: 0;
-            padding-top: 0;
+
+            @container (min-width: 768px) {
+                height: 600px;
+            }
 
             .flex-row :global {
                 overflow: visible;
-                height: 100%;
+
+                justify-content: flex-end;
+
+                @container (min-width: 768px) {
+                    justify-content: flex-start;
+                }
             }
 
             .imageFullWidth {
-                height: 500px;
+                height: calc(100% - 250px);
                 left: 0;
                 position: absolute;
                 top: 0;
@@ -74,22 +96,22 @@
             }
 
             .text-box {
+                align-self: center;
                 background-color: var(--blue);
                 color: white;
                 padding: 30px 20px;
+                margin-top: 50%;
                 max-width: 605px;
                 position: relative;
-                margin-top: 320px;
                 z-index: 2;
                 font-size: 1.5rem;
                 line-height: 2.1rem;
 
                 @container (min-width: 768px) {
-                    align-self: flex-end;
                     padding: 80px 40px;
+                    margin-top: 50px;
                     font-size: 1.8rem;
                     line-height: 2.52rem;
-                    transform: translateY(50px);
                 }
 
                 .title {
@@ -101,10 +123,6 @@
                         line-height: 4.8rem;
                     }
                 }
-            }
-
-            & + .section {
-                padding-top: 300px;
             }
         }
 
