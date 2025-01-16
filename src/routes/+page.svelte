@@ -13,17 +13,15 @@
     import Faq from "../components/faq.svelte";
 </script>
 
-<Section header>
-    <ImageFullWidth
-        image="/images/full.png"
-        caption="Image full width"
-        mobileImage="/images/project.png"
-    />
+<Section color="grey" header>
     <FlexRow>
+        <ImageFullWidth
+            image="/images/full.png"
+            caption="Image full width"
+            mobileImage="/images/project.png"
+        />
         <TextBox withPadding>
-            <h1 class="title">
-                Les nouveaux luminaires  suspendus INF Concept
-            </h1>
+            <h1 class="title">Les nouveaux luminaires suspendus INF Concept</h1>
             <p>
                 Nous présentons une ligne de luminaires d'intérieur prêts à
                 l'emploi, méticuleusement conçus pour incarner la beauté

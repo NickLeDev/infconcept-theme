@@ -52,4 +52,8 @@
         overflow-x: hidden;
         width: 100%;
     }
+
+    main :global {
+        container-type: inline-size;
+    }
 </style>
